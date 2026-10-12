@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CYBERSURFER // Vault Console</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main class="shell">
+        <header>
+            <p class="eyebrow">CYBERSURFER SECURITY SYSTEMS / NODE 09</p>
+            <h1>Vault Console</h1>
+            <p class="sub">Restricted client diagnostics. Authorization is evaluated locally.</p>
+        </header>
+
+        <section class="login card">
+            <h2>Operator verification</h2>
+            <label for="operator">Operator alias</label>
+            <input id="operator" autocomplete="off" placeholder="operator">
+            <label for="passcode">Access phrase</label>
+            <input id="passcode" type="password" placeholder="••••••••">
+            <button id="loginBtn">Authenticate</button>
+            <p id="status" role="status">Console locked.</p>
+        </section>
+
+        <section class="card terminal" id="terminal" aria-live="polite">
+            <div class="terminal-head"><span></span><span></span><span></span><b>diagnostic-stream</b></div>
+            <pre id="output">Awaiting diagnostic request...</pre>
+        </section>
+
+        <footer>
+            <span>BUILD 4.8.1-client</span>
+            <span>NO SERVER CONNECTION</span>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
